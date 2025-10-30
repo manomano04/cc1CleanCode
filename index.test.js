@@ -12,6 +12,11 @@ describe("index", () => {
         expect(test(dices)).toBe(50);
     })
 
+    it("Grande Suite : should return 40", () => {
+        const dices = [[2,1,5,3,4]]
+        expect(test(dices)).toBe(40);
+    })
+
     it("carré : shoul return 35", () => {
         const dices = [[1,1,1,1,2]]
         expect(test(dices)).toBe(35);
@@ -22,17 +27,14 @@ describe("index", () => {
         expect(test(dices)).toBe(30);
     })
 
-    it("brelan : shoul return 28", () => {
+    it("brelan : should return 28", () => {
         const dices = [[1,1,1,3,2]]
         expect(test(dices)).toBe(28);
     })
 
-    it("test few figures : brelan and carré should return 63 ", () => {
-        const dices = [[1,1,1,1,2], [5,4,2,2,2]]
-        expect(test(dices)).toBe(63);
+    it("test divers figures : brelan + carré + chance should return 63 ", () => {
+        const dices = [[1,1,1,1,2], [5,4,2,2,2], [1,1,4,6,3]]
+        expect(test(dices)).toBe(78);
     })
-
-
-
 
 })
